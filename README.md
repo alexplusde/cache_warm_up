@@ -1,52 +1,26 @@
-# cache_warm_up - Dieses Repository kopieren, anpassen, AddOn-Entwicklung für REDAXO starten
-
-Vorlage für REDAXO-Addons für einen schnelleren Start bei der Addon-Entwicklung.
-
-1. https://github.com/alexplusde/cache_warm_up/archive/refs/heads/main.zip ZIP der aktuellen Vorlage herunterladen oder direkt in GitHub ein Repo auf Basis von `alexplusde/cache_warm_up` erstellen: https://github.com/new/import und dort `https://github.com/alexplusde/cache_warm_up.git` angeben.
-2. Mit "Suchen und Ersetzen" alles, was `cache_warm_up` heißt, durch den Namen deines Addons ersetzen, z.B. `supi-dupi-kalender`, und speichern. Sowohl Dateinamen, als auch Dateiinhalte. 
-3. Alles löschen, was du aktuell nicht brauchst (oder für später auskommentiert lassen)
+# Cache Warm UP - Heizt dem REDAXO Cache ordentlich ein!
 
 ## Features
 
-### `package.yml`
+![www redaxo local_redaxo_index php_page=system_cache_warm_up (2)](https://user-images.githubusercontent.com/3855487/210570361-486d88c0-5a1a-40ad-bd0f-a1a781dcde00.png)
 
-Bei Bedarf Abhängigkeiten von REDAXO-AddOns (sog. packages) eintragen, Backend-Seiten aus oder einblenden, vordefinierte Konfigurationswerte setzen.
+### Vollständiges Warm Up aller URLs
 
-### `boot.php`
+Dadurch, dass die `sitemap.xml`-Einträge einer REDAXO-Website (mit installiertem YRewrite) durchlaufen werden, werden alle Online-Artikel einschließlich URLs aufgerufen, die durch das URL-Addon generiert werden.
 
-Gängige Code-Beispiele wie der Syntax zum Überprüfen einer Addon-Installation, der Unterscheidung zwischen Front- und Backend, dem Registrieren eigener YForm-Dataset-Klasen.
+### Status-Codes
 
-### `install.php`
+Cache Warm Up bricht nicht ab, wenn ein Artikel oder eine URL nicht funktioniert. Stattdessen wird der Fehlercode ausgewertet und in das Log geschrieben. So kann Warm Up alle URLs durchlaufen und bricht nicht mittendrin ab.
 
-Gängige Code-Beispiele zum Installieren von YForm-Tablesets, Meta-Infofeldern und dem Verwenden von Extension Points, Cronjobs u.a.
+### Effizienter Bildcache nur mit verwendeten Bild-Profil-Kombinationen generieren
 
-### `dataedit.php` für YForm-Datentabellen
+Cache Warm Up generiert Bilder nicht auf Vorrat. Stattdessen empfehle ich, das Addon `media_manager_responsive` zu verwenden. Die Idee dahinter ist einfach: Alle benötigten Bildprofil-Kombinationen liegen bereits im Artikel vor - wird dieser aufgerufen, werden die durch `media_manager_responsive` eingebettete Bilder automatisch generiert.
 
-Dein Addon nutzt YForm als Ausgangsbasis? Nutze YForm-Tabellen innerhalb deiner Addon-Seiten via https://friendsofredaxo.github.io/tricks/addons/yform/im-addon
+Das spart Speicherplatz und ist effizienter.
 
-### `update.php`
+### geplant: Warm Up einzelner URLs und Artikel via EP
 
-Gängige Code-Beispiele, die in Abhängigkeit der Vorgänger-Version deines Addons ausgeführt werden.
-
-### `uninstall.php`
-
-Alle Code-Beispiele, die du in der `install.php` nutzt, können hier wieder rückkgängig gemacht werden.
-
-### `lang/`
-
-cache_warm_up für deine eigene Sprachdatei. Beginne die Addon-Entwicklung direkt so, dass weitere Sprachen ohne Anpassungen ergänzt werden können.
-
-### `fragmente/`
-
-cache_warm_up für die Nutzung eigener Fragmente.
-
-### Docs-Seite
-
-Passe diese README.md-Datei an und spiele sie als Hilfe-Seite zu deinem Addon aus. Halte dich an die Struktur dieser README.md-Datei für deine eigenen Addons, indem du die wichtigsten Funktionen, Klassen und Methoden sowie den Installationsprozess und die Funktionsweise erklärst. Mit Verweis auf die Autoren, Projekt-Lead und Credits.
-
-### Einstellungs-Seite
-
-Beginne mit einem Konfigurations-Formular, das bereits best practice in REDAXO umsetzt - mit Links zu den wichtigsten API-Docs.
+Unterstütze dieses Addon mit einer Beauftragung des Autors, um dieses Feature umzusetzen.
 
 ## Lizenz
 
