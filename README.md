@@ -1,9 +1,9 @@
-# Blaupause - Dieses Repository kopieren, anpassen, AddOn-Entwicklung für REDAXO starten
+# cache_warm_up - Dieses Repository kopieren, anpassen, AddOn-Entwicklung für REDAXO starten
 
 Vorlage für REDAXO-Addons für einen schnelleren Start bei der Addon-Entwicklung.
 
-1. https://github.com/alexplusde/blaupause/archive/refs/heads/main.zip ZIP der aktuellen Vorlage herunterladen oder direkt in GitHub ein Repo auf Basis von `alexplusde/blaupause` erstellen: https://github.com/new/import und dort `https://github.com/alexplusde/blaupause.git` angeben.
-2. Mit "Suchen und Ersetzen" alles, was `blaupause` heißt, durch den Namen deines Addons ersetzen, z.B. `supi-dupi-kalender`, und speichern. Sowohl Dateinamen, als auch Dateiinhalte. 
+1. https://github.com/alexplusde/cache_warm_up/archive/refs/heads/main.zip ZIP der aktuellen Vorlage herunterladen oder direkt in GitHub ein Repo auf Basis von `alexplusde/cache_warm_up` erstellen: https://github.com/new/import und dort `https://github.com/alexplusde/cache_warm_up.git` angeben.
+2. Mit "Suchen und Ersetzen" alles, was `cache_warm_up` heißt, durch den Namen deines Addons ersetzen, z.B. `supi-dupi-kalender`, und speichern. Sowohl Dateinamen, als auch Dateiinhalte. 
 3. Alles löschen, was du aktuell nicht brauchst (oder für später auskommentiert lassen)
 
 ## Features
@@ -34,11 +34,11 @@ Alle Code-Beispiele, die du in der `install.php` nutzt, können hier wieder rüc
 
 ### `lang/`
 
-Blaupause für deine eigene Sprachdatei. Beginne die Addon-Entwicklung direkt so, dass weitere Sprachen ohne Anpassungen ergänzt werden können.
+cache_warm_up für deine eigene Sprachdatei. Beginne die Addon-Entwicklung direkt so, dass weitere Sprachen ohne Anpassungen ergänzt werden können.
 
 ### `fragmente/`
 
-Blaupause für die Nutzung eigener Fragmente.
+cache_warm_up für die Nutzung eigener Fragmente.
 
 ### Docs-Seite
 
@@ -50,7 +50,7 @@ Beginne mit einem Konfigurations-Formular, das bereits best practice in REDAXO u
 
 ## Lizenz
 
-MIT Lizenz, siehe [LICENSE.md](https://github.com/alexplusde/blaupause/blob/master/LICENSE.md)  
+MIT Lizenz, siehe [LICENSE.md](https://github.com/alexplusde/cache_warm_up/blob/master/LICENSE.md)  
 
 ## Autoren
 
