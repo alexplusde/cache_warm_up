@@ -1,5 +1,5 @@
 package: cache_warm_up
-version: '0.0.1-dev'
+version: '1.0.0'
 author: 'Alexander Walther'
 supportpage: https://github.com/alexplusde/cache_warm_up
 
@@ -15,12 +15,14 @@ page:
     title: translate:cache_warm_up_title
     prio: 100
     icon: rex-icon fa-gear
+    hidden: true
 
 pages:
     system/cache_warm_up:
         title: translate:cache_warm_up_title
         icon: rex-icon fa-gear
         perm: cache_warm_up[]
+        itemclass: pull-right
 
 default_config:
     field: 'Test'
