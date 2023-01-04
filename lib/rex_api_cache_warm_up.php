@@ -10,8 +10,8 @@ class rex_api_cache_warm_up extends rex_api_function
         header('Cache-Control: no-cache');
  
 
-        if(rex_get('url', 'string')) {
-            cache_warm_up::warm_up($url);
+        if (rex_get('url', 'string')) {
+            cache_warm_up::warm_up(rex_get('url', 'string'));
             exit;
         }
 
@@ -32,7 +32,7 @@ class rex_api_cache_warm_up extends rex_api_function
             $id++;
         }
 
-        self::sendMessage('✅', '', '','', '','', '');
+        self::sendMessage('✅', '', '', '', '', '', '');
         exit;
     }
 
