@@ -1,4 +1,4 @@
-# Cache Warm Up - Heizt REDAXO CMS ordentlich ein!
+# Cache Warm Up - Heizt REDAXO CMS ordentlich ein! 🥵
 
 ## Features
 
