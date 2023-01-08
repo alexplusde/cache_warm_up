@@ -5,6 +5,9 @@ class cache_warm_up
     {
         if (!$url) {
             return;
+        } 
+        if (rex_addon::get('url')->isAvailable() && rex_config::get('maintenance', 'frontend_aktiv') == "Aktivieren") {
+            $url .= "?secret=".rex_config::get('maintenance', 'frontend_aktiv');
         }
         try {
             $socket = rex_socket::factoryUrl($url);
