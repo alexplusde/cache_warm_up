@@ -9,7 +9,6 @@ class rex_api_cache_warm_up extends rex_api_function
         header('Content-Type: text/event-stream');
         header('Cache-Control: no-cache');
  
-
         if (rex_get('url', 'string')) {
             cache_warm_up::warm_up(rex_get('url', 'string'));
             exit;
@@ -21,7 +20,7 @@ class rex_api_cache_warm_up extends rex_api_function
         $id = 1;
         $success = 0;
         $error = 0;
-                
+ 
         foreach ($urls as $url) {
             $response = cache_warm_up::warm_up($url);
             if ($response->isOk()) {
@@ -30,6 +29,7 @@ class rex_api_cache_warm_up extends rex_api_function
                 self::sendMessage($id, $url, '🤔', $response->getStatusCode(), 'nicht erfolgreich', ++$error, $total);
             }
             $id++;
+            sleep(1);
         }
 
         self::sendMessage('✅', '', '', '', '', '', '');
