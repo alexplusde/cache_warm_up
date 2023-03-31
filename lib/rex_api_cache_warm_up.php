@@ -29,7 +29,6 @@ class rex_api_cache_warm_up extends rex_api_function
                 self::sendMessage($id, $url, '🤔', $response->getStatusCode(), 'nicht erfolgreich', ++$error, $total);
             }
             $id++;
-            sleep(1);
         }
 
         self::sendMessage('✅', '', '', '', '', '', '');
